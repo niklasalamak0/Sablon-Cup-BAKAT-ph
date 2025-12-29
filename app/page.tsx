@@ -1,5 +1,6 @@
 import HeroSection from "@/components/hero-section"
 import ServicesSection from "@/components/services-section"
+import VideoSection from "@/components/video-section"
 import PortfolioSection from "@/components/portfolio-section"
 import ProcessSection from "@/components/process-section"
 import Navigation from "@/components/navigation"
@@ -11,6 +12,7 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <ServicesSection />
+      <VideoSection />
       <PortfolioSection />
       <ProcessSection />
       <Footer />
