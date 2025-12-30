@@ -57,7 +57,7 @@ export default function ProcessSection() {
           </p>
           <a
                 href={`https://wa.me/6281330602901?text=${encodeURIComponent(
-                  "Halo, saya ingin konsultasi gratis tentang sablon cup plastik untuk usaha minuman saya."
+                  "Halo, saya tertarik dengan layanan sablon cup plastik. Bisa dibantu konsultasi? saya ingin tanya tanya beberapa hal. Mohon info dan penawarannya."
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
