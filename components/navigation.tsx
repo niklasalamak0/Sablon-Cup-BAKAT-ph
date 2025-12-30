@@ -38,8 +38,8 @@ export default function Navigation() {
             Proses Pesan
           </Link>
           <a
-  href={`https://wa.me/6285546418583?text=${encodeURIComponent(
-    "Halo, saya tertarik dengan layanan sablon cup plastik. Bisa dibantu konsultasi?"
+  href={`https://wa.me/6281330602901?text=${encodeURIComponent(
+    "Halo, saya tertarik dengan layanan sablon cup plastik. Bisa dibantu konsultasi? saya ingin tanya tanya beberapa hal"
   )}`}
   target="_blank"
   rel="noopener noreferrer"
