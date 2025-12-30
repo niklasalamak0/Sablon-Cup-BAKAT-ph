@@ -41,7 +41,7 @@ export default function HeroSection() {
             {/* CTA */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a
-                href={`https://wa.me/6285546418583?text=${encodeURIComponent(
+                href={`https://wa.me/6281330602901?text=${encodeURIComponent(
                   "Halo, saya ingin konsultasi gratis tentang sablon cup plastik untuk usaha minuman saya."
                 )}`}
                 target="_blank"
