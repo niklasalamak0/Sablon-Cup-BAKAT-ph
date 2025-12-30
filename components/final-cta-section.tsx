@@ -2,7 +2,7 @@ export default function FinalCtaSection() {
   const whatsappNumber = "6281330602901"
 
   const waMessage = encodeURIComponent(
-    "Halo, saya ingin konsultasi gratis mengenai sablon cup plastik untuk usaha minuman saya. Mohon info dan penawarannya."
+    "Halo, saya tertarik dengan layanan sablon cup plastik. Bisa dibantu konsultasi? saya ingin tanya tanya beberapa hal. Mohon info dan penawarannya."
   )
 
   return (
