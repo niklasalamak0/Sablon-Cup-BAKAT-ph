@@ -54,11 +54,17 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 📱 WhatsApp:{" "}
-                <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" className="hover:text-white transition">
+                <a
+                  href="https://wa.me/6281330602901"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition cursor-pointer"
+                >
                   Chat Now
                 </a>
               </li>
-              <li>📧 Email: info@bakat.co.id</li>
+
+              <li>📧 Email: bakti.karyateknik@gmail.com</li>
               <li>📍 Trenggalek, Indonesia</li>
             </ul>
           </div>
