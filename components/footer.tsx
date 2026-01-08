@@ -65,7 +65,7 @@ export default function Footer() {
               </li>
 
               <li>📧 Email: bakti.karyateknik@gmail.com</li>
-              <li>📍 Trenggalek, Indonesia</li>
+              <li>📍 Rt 03/Rw 01, Dusun : Bendo, Bendorejo Selatan Bidan Kasini Gudang Galvalum Barat Jalan (BAKAT), Kec Pogalan Kab Trenggalek Jawa Timur Indonesia 66371</li>
             </ul>
           </div>
         </div>
