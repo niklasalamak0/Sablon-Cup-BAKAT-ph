@@ -32,7 +32,7 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     title: "Ruang Luang",
     category: "Kopi",
-    image: "/portofolio/ruang-luang.jpg", // jika file belum ada, isi nanti
+    image: "/portofolio/ruang-luang-sablon.jpeg", // jika file belum ada, isi nanti
     mockup: "/portofolio/mockup/ruang-luang-mockup.jpg",
   },
   {
