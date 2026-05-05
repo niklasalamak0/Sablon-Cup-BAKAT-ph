@@ -16,7 +16,7 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     title: "Jeruk Perasqu",
-    category: "Es Jeruk Peras",
+    category: "Es Jeruk",
     image: "/portofolio/jeruk-perasqu.jpg",
   },
   {
@@ -51,12 +51,12 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     title: "Es Teler Locari",
-    category: "Kopi",
+    category: "Es Teler",
     image: "/portofolio/teler-locari.jpeg",
   },
   {
     title: "T'alkas",
-    category: "Kopi",
+    category: "Es Buah",
     image: "/portofolio/talkas.jpeg",
   },
   {
