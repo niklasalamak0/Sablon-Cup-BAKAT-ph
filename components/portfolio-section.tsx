@@ -27,7 +27,7 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     title: "Ruang Luang",
     category: "Kopi",
-    image: "/portofolio/ruang-luang.jpg",
+    image: "/portofolio/ruang-luang.jpeg",
   },
   {
     title: "Ammor Coffee and Space",
