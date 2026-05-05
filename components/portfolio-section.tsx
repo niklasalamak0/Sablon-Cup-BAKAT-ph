@@ -72,7 +72,7 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
   {
     title: "Best Tea",
     category: "Es Teh",
-    image: "/portofolio/best-tea.jpg",
+    image: "/portofolio/best-tea.jpeg",
   },
   {
     title: "Apacok",
