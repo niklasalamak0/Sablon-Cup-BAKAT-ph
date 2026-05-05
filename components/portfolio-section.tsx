@@ -102,29 +102,30 @@ export default function PortfolioSection() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Grid - Dioptimalkan untuk 2 kolom di HP */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
           {PORTFOLIO_ITEMS.map((item, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl overflow-hidden border border-orange-100 hover:border-orange-300 transition group"
+              className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all group"
             >
-              {/* Image Container */}
-              <div className="relative w-full aspect-[3/4] bg-orange-50 overflow-hidden flex items-center justify-center">
+              {/* Image Container - Diubah jadi Square (1:1) */}
+              <div className="relative w-full aspect-square bg-gray-50 overflow-hidden">
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 768px) 50vw, 25vw"
                 />
               </div>
 
-              {/* Info */}
-              <div className="p-4">
-                <h3 className="font-bold text-gray-900 text-lg">
+              {/* Info - Ukuran teks diperkecil agar pas di 2 kolom mobile */}
+              <div className="p-3 md:p-4">
+                <h3 className="font-bold text-gray-900 text-sm md:text-base truncate">
                   {item.title}
                 </h3>
-                <p className="text-sm text-orange-600 font-medium">
+                <p className="text-xs text-orange-600 font-medium">
                   {item.category}
                 </p>
               </div>
