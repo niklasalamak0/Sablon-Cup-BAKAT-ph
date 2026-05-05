@@ -59,6 +59,42 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
     image: "/portofolio/balok-kayu.jpeg", // optional
     mockup: "/portofolio/mockup/balok-kayu-mockup.jpg",
   },
+  {
+    title: "Es Teler Locari",
+    category: "Kopi",
+    image: "/portofolio/teler-locari.jpeg",
+    mockup: "/portofolio/mockup/maju-jaya-mockup.jpg",
+  },
+  {
+    title: "T'alkas",
+    category: "Kopi",
+    image: "/portofolio/talkas.jpeg", // jika file belum ada, isi nanti
+    mockup: "/portofolio/mockup/ruang-luang-mockup.jpg",
+  },
+  {
+    title: "Kedai Mayor",
+    category: "Kopi",
+    image: "/portofolio/kedai-mayor.jpeg", // jika belum ada, silakan tambah
+    mockup: "/portofolio/mockup/ammor-mockup.jpg",
+  },
+  {
+    title: "Cendol Dawet",
+    category: "es buah",
+    image: "/portofolio/cendol-dawet.jpeg", // optional
+    mockup: "/portofolio/mockup/dua-darah.png",
+  },
+  {
+    title: "Best Tea",
+    category: "Es Teh",
+    image: "/portofolio/best-tea.jpg", // jika belum ada, silakan tambah
+    mockup: "/portofolio/mockup/sobat-esteh-mockup.jpg",
+  },
+  {
+    title: "Apacok",
+    category: "Es Buah",
+    image: "/portofolio/apacok.jpeg", // optional
+    mockup: "/portofolio/mockup/balok-kayu-mockup.jpg",
+  },
 ]
 
 
@@ -148,7 +184,7 @@ export default function PortfolioSection() {
       {/* CTA */}
       <div className="text-center mt-12">
         <a
-          href="https://wa.me/628XXXXXXXXXX"
+          href="https://wa.me/6281330602901"
           target="_blank"
           className="inline-flex items-center gap-2 bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition"
         >
