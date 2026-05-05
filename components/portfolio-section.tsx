@@ -79,7 +79,7 @@ const PORTFOLIO_ITEMS: PortfolioItem[] = [
   },
   {
     title: "Cendol Dawet",
-    category: "es buah",
+    category: "Es Buah",
     image: "/portofolio/cendol-dawet.jpeg", // optional
     mockup: "/portofolio/mockup/dua-darah.png",
   },
