@@ -97,9 +97,7 @@ export default function VideoSection() {
                 <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/proses-sablon-cup-M0nCcEpP3Dj1R7IUdIvavQm92EGOFd.mp4" type="video/mp4" />
               </video>
 
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity">
-                
-              </div>
+
             </div>
 
             <div className="absolute -bottom-6 -right-6 md:right-0 bg-white p-4 rounded-2xl shadow-2xl border border-gray-100 z-30 hidden sm:flex items-center gap-4 animate-bounce">
