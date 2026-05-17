@@ -115,7 +115,7 @@ export default function VideoSection() {
 
     {/* Floating Badge */}
     <div className="absolute -bottom-6 -right-6 md:right-0 bg-white p-4 rounded-2xl shadow-2xl border border-gray-100 z-30 hidden sm:flex items-center gap-4 animate-bounce">
-       <div className="bg-green-100 p-2 rounded-lg text-green-600 italic font-black text-sm">100%</div>
+       <div className="bg-green-100 p-2 rounded-lg text-green-600 font-black text-sm">100%</div>
        <div className="text-[10px] font-bold text-gray-800 leading-tight uppercase">
          Hasil Presisi<br/>Sesuai Desain
        </div>
