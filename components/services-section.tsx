@@ -35,23 +35,59 @@ export default function ServicesSection() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {SERVICES.map((service, idx) => {
-            const Icon = service.icon
-            return (
-              <div
-                key={idx}
-                className="bg-gradient-to-br from-orange-50 to-white border border-orange-100 rounded-xl p-8 hover:shadow-lg hover:border-orange-300 transition duration-300"
-              >
-                <div className="w-12 h-12 rounded-lg bg-orange-600 flex items-center justify-center mb-4">
-                  <Icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{service.description}</p>
-              </div>
-            )
-          })}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+  {SERVICES.map((service, idx) => {
+    const Icon = service.icon
+    return (
+      <div
+        key={idx}
+        className="group relative bg-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-[0_10px_40px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_60px_-20px_rgba(234,88,12,0.15)] transition-all duration-500 hover:-translate-y-2 overflow-hidden"
+      >
+        {/* 1. Efek Background Glow (Muncul saat Hover) */}
+        <div className="absolute -right-10 -top-10 w-32 h-32 bg-orange-50 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+        
+        {/* 2. Nomor Index Transparan di Background */}
+        <span className="absolute right-8 top-6 text-7xl font-black text-gray-50 group-hover:text-orange-100/50 transition-colors duration-500 select-none">
+          0{idx + 1}
+        </span>
+
+        <div className="relative z-10">
+          {/* 3. Icon Container dengan Animasi Orbit */}
+          <div className="relative w-16 h-16 mb-8">
+            {/* Ring dekorasi yang berputar halus */}
+            <div className="absolute inset-0 border-2 border-orange-100 rounded-2xl rotate-45 group-hover:rotate-90 transition-transform duration-700"></div>
+            
+            <div className="absolute inset-0 bg-gradient-to-tr from-orange-600 to-amber-500 rounded-2xl flex items-center justify-center shadow-lg shadow-orange-600/30 group-hover:scale-110 transition-transform duration-500">
+              <Icon className="w-8 h-8 text-white transition-transform duration-500 group-hover:rotate-[-12deg]" />
+            </div>
+          </div>
+
+          {/* 4. Text Content */}
+          <h3 className="text-2xl font-extrabold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
+            {service.title}
+          </h3>
+          
+          <p className="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors">
+            {service.description}
+          </p>
+
+          {/* 5. Dekorasi Garis Aktif di Bawah */}
+          <div className="mt-8 flex items-center gap-2">
+            <div className="h-1 w-12 bg-orange-200 rounded-full overflow-hidden">
+              <div className="h-full w-full bg-orange-600 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-700"></div>
+            </div>
+            <span className="text-xs font-bold text-orange-600 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-500">
+            
+            </span>
+          </div>
         </div>
+
+        {/* BORDER GRADIENT ANIMASI (Halus) */}
+        <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-orange-500 to-amber-300 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+      </div>
+    )
+  })}
+</div>
       </div>
     </section>
   )

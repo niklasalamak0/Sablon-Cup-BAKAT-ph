@@ -101,49 +101,99 @@ export default function PortfolioSection() {
           </p>
         </div>
 
-        {/* Grid */}
-        {/* Grid - Dioptimalkan untuk 2 kolom di HP */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-          {PORTFOLIO_ITEMS.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all group"
-            >
-              {/* Image Container - Diubah jadi Square (1:1) */}
-              <div className="relative w-full aspect-square bg-gray-50 overflow-hidden">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-              </div>
-
-              {/* Info - Ukuran teks diperkecil agar pas di 2 kolom mobile */}
-              <div className="p-3 md:p-4">
-                <h3 className="font-bold text-gray-900 text-sm md:text-base truncate">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-orange-600 font-medium">
-                  {item.category}
-                </p>
-              </div>
-            </div>
-          ))}
+        {/* Grid - Dioptimalkan untuk 2 kolom di HP dengan Desain Lebih Catchy */}
+<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8">
+  {PORTFOLIO_ITEMS.map((item, idx) => (
+    <div
+      key={idx}
+      className="group relative bg-white rounded-2xl overflow-hidden shadow-[0_4px_20px_-5px_rgba(0,0,0,0.05)] hover:shadow-[0_20px_40px_-15px_rgba(234,88,12,0.2)] transition-all duration-500 hover:-translate-y-2"
+    >
+      {/* 1. Image Container dengan Overlay Interaktif */}
+      <div className="relative w-full aspect-square bg-gray-100 overflow-hidden">
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 group-hover:rotate-2"
+          sizes="(max-width: 768px) 50vw, 25vw"
+        />
+        
+        {/* Glassmorphism Overlay saat Hover (Hanya muncul di Desktop) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-orange-600/80 via-orange-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6">
+          
         </div>
+      </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <a
-            href="https://wa.me/6281330602901"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition"
-          >
-            Lihat Lebih Banyak Desain
-          </a>
+      {/* 2. Info Section dengan Desain Bersih */}
+      <div className="p-4 relative bg-white">
+        {/* Garis Aksen Kecil (Hanya muncul saat Hover) */}
+        <div className="absolute top-0 left-0 w-0 h-[2px] bg-orange-500 group-hover:w-full transition-all duration-500"></div>
+        
+        <p className="text-[10px] md:text-xs text-orange-600 font-bold uppercase tracking-widest mb-1">
+          {item.category}
+        </p>
+        <h3 className="font-extrabold text-gray-900 text-sm md:text-lg leading-tight truncate">
+          {item.title}
+        </h3>
+        
+        {/* Indikator Panah Kecil */}
+        <div className="mt-2 flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span className="text-[10px] font-bold text-gray-400 uppercase"></span>
+          <svg className="w-3 h-3 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            
+          </svg>
         </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+        {/* CTA - Dengan Efek Pecah/Partikel saat Hover */}
+<div className="text-center mt-16">
+  <a
+    href="https://wa.me/6281330602901"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      relative inline-flex items-center gap-2 
+      bg-orange-600 text-white 
+      px-10 py-4 rounded-xl font-bold 
+      transition-all duration-300
+      hover:bg-orange-700 hover:scale-105 active:scale-95
+      group overflow-visible
+    "
+  >
+    {/* Partikel Pecahan (Kepingan) - Disembunyikan saat normal, menyebar saat hover */}
+    <span className="absolute inset-0 z-0 pointer-events-none">
+      {/* Kepingan 1 */}
+      <span className="absolute top-0 left-1/2 w-2 h-2 bg-orange-400 rounded-sm opacity-0 group-hover:opacity-100 group-hover:-translate-y-12 group-hover:-translate-x-12 group-hover:rotate-45 transition-all duration-500"></span>
+      {/* Kepingan 2 */}
+      <span className="absolute top-1/2 right-0 w-3 h-3 bg-amber-500 rounded-full opacity-0 group-hover:opacity-100 group-hover:-translate-y-8 group-hover:translate-x-16 group-hover:rotate-12 transition-all duration-700"></span>
+      {/* Kepingan 3 */}
+      <span className="absolute bottom-0 left-1/4 w-2 h-4 bg-orange-300 rounded-sm opacity-0 group-hover:opacity-100 group-hover:translate-y-12 group-hover:-translate-x-8 group-hover:-rotate-12 transition-all duration-600"></span>
+      {/* Kepingan 4 */}
+      <span className="absolute top-1/4 left-0 w-3 h-1 bg-orange-500 opacity-0 group-hover:opacity-100 group-hover:translate-y-4 group-hover:-translate-x-20 group-hover:rotate-90 transition-all duration-500"></span>
+      {/* Kepingan 5 (Sparkle) */}
+      <span className="absolute bottom-1/2 right-1/4 w-2 h-2 bg-white opacity-0 group-hover:opacity-100 group-hover:-translate-y-16 group-hover:translate-x-12 group-hover:scale-150 transition-all duration-1000"></span>
+    </span>
+
+    {/* Konten Utama Tombol */}
+    <span className="relative z-10 flex items-center gap-2">
+      Lihat Lebih Banyak Desain
+      <svg 
+        className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" 
+        fill="none" 
+        stroke="currentColor" 
+        viewBox="0 0 24 24"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+      </svg>
+    </span>
+
+    {/* Efek Border Bersinar (Glow) saat Hover */}
+    <span className="absolute inset-0 rounded-xl bg-orange-400 blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-300 -z-10"></span>
+  </a>
+</div>
       </div>
     </section>
   )
