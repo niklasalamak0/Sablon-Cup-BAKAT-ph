@@ -109,6 +109,6 @@ export default function VideoSection() {
 
         </div>
       </div>
-    </section>
+    </section> 
   )
 }
